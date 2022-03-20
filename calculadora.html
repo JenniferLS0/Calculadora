@@ -1,0 +1,284 @@
+<!doctype HTML>
+<html lang="pt-br">
+    <head>
+        <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0"/>
+        <meta name="author" content="Jennifer Lima"/>
+        <meta charset="utf-8"/>
+        <title>Calculadora</title>
+        <style type="text/css">
+
+            body
+            {
+                background-color:silver;
+            }
+            
+            p
+            {
+                color: RoyalBlue;
+                font-family: cursive;
+                margin-top: 2%;
+                font-size: 60px;
+                margin-left:39%;
+            }
+
+            #calculadora
+            {
+                margin-left:25%;
+                margin-right:25%;
+                margin-bottom:15%;
+                margin-top: 5%;
+                border: 5px double RoyalBlue;
+                background-color:LightSteelBlue;
+                box-shadow: 0px 5px 10px dimgrey;
+                font-family: cursive;
+                font-size: 20px;
+                color: RoyalBlue;
+                padding-top:1%;
+                padding-bottom:1%;
+
+            }
+
+            #botao
+            {
+                padding-left:12%;
+            }
+
+            #txt
+            {
+                padding-left:16%;
+            }
+
+            #btnlimpar
+            {
+                margin-left:45%;
+            }
+
+            #resultado
+            {
+                margin-left:37%;
+            }
+
+            #lblresult
+            {
+                margin-left:43%;
+            }
+
+        </style>
+        <script language="JavaScript">
+
+    
+            function limpar()
+            {
+                document.getElementById("txtnum1").focus();
+            }
+
+            function adicao()
+            {
+                var num1=document.getElementById("txtnum1").value;
+                var num2=document.getElementById("txtnum2").value;
+                var result;
+
+                if(isNaN(num1))
+                    {
+                        window.alert("Digite somente valores numéricos!");
+                        document.getElementById("txtnum1").value="";
+                        document.getElementById("txtnum1").focus();
+                    }
+
+                else if(isNaN(num2))
+                    {
+                        window.alert("Digite somente valores numéricos!");
+                        document.getElementById("txtnum2").value="";
+                        document.getElementById("txtnum2").focus();
+                    }
+                else 
+                    {
+                        num1=parseFloat(num1);
+                        num2=parseFloat(num2);
+                        result=num1+num2;
+                        document.getElementById("txtresult").value=result;
+                    }
+            }
+
+            function subtracao ()
+            {
+
+                var num1=document.getElementById("txtnum1").value;
+                var num2=document.getElementById("txtnum2").value;
+                var result;
+                if(isNaN(num1))
+
+                    {
+                        window.alert("Digite somente valores numéricos!");
+                        document.getElementById("txtnum1").value="";
+                        document.getElementById("txtnum1").focus();
+                    }
+
+                else if(isNaN(num2))
+                    {
+                        window.alert("Digite somente valores numéricos!");
+                        document.getElementById("txtnum2").value="";
+                        document.getElementById("txtnum2").focus();
+                    }
+                else 
+                    {
+                        num1=parseFloat(num1);
+                        num2=parseFloat(num2);
+                        result=num1-num2;
+                        document.getElementById("txtresult").value=result;
+                    }
+            }
+
+            function divisao()
+            {
+
+                var num1=document.getElementById("txtnum1").value;
+                var num2=document.getElementById("txtnum2").value;
+                var result;
+                if(isNaN(num1))
+
+                    {
+                        window.alert("Digite somente valores numéricos!");
+                        document.getElementById("txtnum1").value="";
+                        document.getElementById("txtnum1").focus();
+                    }
+
+                else if(isNaN(num2))
+                    {
+                        window.alert("Digite somente valores numéricos!");
+                        document.getElementById("txtnum2").value="";
+                        document.getElementById("txtnum2").focus();
+                    }
+                else 
+                    {
+                        num1=parseFloat(num1);
+                        num2=parseFloat(num2);
+                        result=num1/num2;
+                        document.getElementById("txtresult").value=result;
+                    }
+            }
+
+            function multiplicacao()
+            {
+
+                var num1=document.getElementById("txtnum1").value;
+                var num2=document.getElementById("txtnum2").value;
+                var result;
+                if(isNaN(num1))
+
+                    {
+                        window.alert("Digite somente valores numéricos!");
+                        document.getElementById("txtnum1").value="";
+                        document.getElementById("txtnum1").focus();
+                    }
+
+                else if(isNaN(num2))
+                    {
+                        window.alert("Digite somente valores numéricos!");
+                        document.getElementById("txtnum2").value="";
+                        document.getElementById("txtnum2").focus();
+                    }
+                else 
+                    {
+                        num1=parseFloat(num1);
+                        num2=parseFloat(num2);
+                        result=num1*num2;
+                        document.getElementById("txtresult").value=result;
+                    }
+            }
+
+            function exponenciacao()
+            {
+
+                var num1=document.getElementById("txtnum1").value;
+                var num2=document.getElementById("txtnum2").value;
+                var result;
+                if(isNaN(num1))
+
+                    {
+                        window.alert("Digite somente valores numéricos!");
+                        document.getElementById("txtnum1").value="";
+                        document.getElementById("txtnum1").focus();
+                    }
+
+                else if(isNaN(num2))
+                    {
+                        window.alert("Digite somente valores numéricos!");
+                        document.getElementById("txtnum2").value="";
+                        document.getElementById("txtnum2").focus();
+                    }
+                else 
+                    {
+                        num1=parseFloat(num1);
+                        num2=parseFloat(num2);
+                        result=Math.pow(num1,num2);
+                        document.getElementById("txtresult").value=result;
+                    }
+            }
+
+            function raiz()
+            {
+
+                var num1=document.getElementById("txtnum1").value;
+                var num2=document.getElementById("txtnum2").value;
+                var num3;
+                var result;
+                if(isNaN(num1))
+
+                    {
+                        window.alert("Digite somente valores numéricos!");
+                        document.getElementById("txtnum1").value="";
+                        document.getElementById("txtnum1").focus();
+                    }
+
+                else if(isNaN(num2))
+                    {
+                        window.alert("Digite somente valores numéricos!");
+                        document.getElementById("txtnum2").value="";
+                        document.getElementById("txtnum2").focus();
+                    }
+                else 
+                    {
+                        num1=parseFloat(num1);
+                        num2=parseFloat(num2);
+                        result=Math.sqrt(num1,num2);
+                        document.getElementById("txtresult").value=result;
+                    }
+            }
+        </script>
+    </head>
+    <body>
+        <form>
+            <p>Calculadora</p>
+            <div id="calculadora">
+                <div id="txt">
+                    <label for="txtpeso">Informe primeiro número:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                    <input type="text" id="txtnum1"/><br/>
+                    <br/>
+                    <label for="txtaltu">Informe o segundo número:&nbsp;&nbsp;&nbsp;</label>
+                    <input type="text" id="txtnum2"/><br/><br/>
+                </div>
+
+                <div id="botao">
+                    <input type="button" value="Adição" onClick="adicao()"/>
+                    <input type="button" value="Subtração" onClick="subtracao()"/>
+                    <input type="button" value="Divisão" onClick="divisao()"/>
+                    <input type="button" value="Multiplicação" onClick="multiplicacao()"/>
+                    <input type="button" value="Exponenciação" onClick="exponenciacao()"/>
+                    <input type="button" value="Raiz Quadrada" onClick="raiz()"/>
+                </div>
+            <br/>
+                <div id="btnlimpar">
+                    <input type="reset" value="Limpar" onClick="limpar()"/>
+                </div>
+            <br/>
+                <div id="lblresult">
+                    <label for="txtaltu">Resultado:</label>
+                </div>
+                <div id="resultado">
+                    <input type="text" id="txtresult" disabled/><br/><br/>
+                </div>
+            </div>
+        </form>
+    </body>
+    </html>
